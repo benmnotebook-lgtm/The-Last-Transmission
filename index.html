@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE LAST TRANSMISSION</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           HOME - LEICHT KLEINER
+        ========================== */
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 68px);
+            line-height: 0.95;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-small {
+            font-size: 10px;
+        }
+
+        .hero-year {
+            font-size: 11px;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .menu-grid {
+            margin-top: 35px;
+        }
+
+
+        /* =========================
+           SUPPORT FORMULARE
+        ========================== */
+
+        .support-form {
+            width: 100%;
+            max-width: 700px;
+            margin-top: 35px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .support-form label {
+            margin-top: 15px;
+
+            color: #777;
+
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .support-form input,
+        .support-form select,
+        .support-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+
+            background: #111;
+
+            border: 1px solid #292929;
+
+            color: #ddd;
+
+            padding: 15px 16px;
+
+            font-family: inherit;
+            font-size: 14px;
+
+            outline: none;
+
+            border-radius: 0;
+        }
+
+        .support-form input:focus,
+        .support-form select:focus,
+        .support-form textarea:focus {
+            border-color: #555;
+        }
+
+        .support-form input::placeholder,
+        .support-form textarea::placeholder {
+            color: #555;
+        }
+
+        .support-form textarea {
+            min-height: 150px;
+
+            resize: vertical;
+
+            line-height: 1.5;
+        }
+
+        .support-form select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           ABSENDEN
+        ========================== */
+
+        .submit-button {
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 16px;
+
+            background: #ddd;
+            color: #080808;
+
+            border: none;
+
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #fff;
+        }
+
+
+        /* =========================
+           TICKET
+        ========================== */
+
+        .ticket-box {
+            width: 100%;
+            max-width: 500px;
+
+            margin-top: 35px;
+            padding: 30px;
+
+            border: 1px solid #292929;
+
+            background: #101010;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+
+            box-sizing: border-box;
+        }
+
+        .ticket-box span {
+            color: #666;
+
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+        .ticket-box strong {
+            color: #ddd;
+
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        .ticket-box small {
+            color: #666;
+
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+
+        /* =========================
+           FAQ
+        ========================== */
+
+        .faq-list {
+            max-width: 800px;
+
+            margin-top: 35px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #222;
+
+            padding: 25px 0;
+        }
+
+        .faq-item strong {
+            color: #ccc;
+
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .faq-item p {
+            color: #777;
+
+            font-size: 14px;
+            line-height: 1.6;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-description {
+                font-size: 13px;
+            }
+
+            .support-form {
+                margin-top: 25px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="header-logo">
+            TLT
+        </div>
+
+        <button
+            class="home-button"
+            onclick="showPage('home')">
+
+            HOME
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="home" class="page active">
+
+        <div class="hero">
+
+            <div class="hero-small">
+                A NEW GAME PROJECT
+            </div>
+
+
+            <h1>
+                THE LAST<br>
+                TRANSMISSION
+            </h1>
+
+
+            <div class="hero-year">
+                COMING 2030
+            </div>
+
+
+            <div class="studio-credit">
+
+                <span>
+                    A GAME BY
+                </span>
+
+                <strong>
+                    MAXIMUS GAMES
+                </strong>
+
+                <small>
+                    WITH MAJOR SUPPORT FROM WEARE STUDIOS
+                </small>
+
+            </div>
+
+
+            <p class="hero-description">
+
+                An open-world military mystery set on a remote island.
+                Explore, investigate, collect information and uncover
+                what happened.
+
+            </p>
+
+
+
+            <!-- HOME BUTTONS -->
+
+            <div class="menu-grid">
+
+
+                <button onclick="showPage('game')">
+
+                    <span class="menu-number">
+                        01
+                    </span>
+
+                    <strong>
+                        THE GAME
+                    </strong>
+
+                    <small>
+                        What is TLT?
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('world')">
+
+                    <span class="menu-number">
+                        02
+                    </span>
+
+                    <strong>
+                        THE WORLD
+                    </strong>
+
+                    <small>
+                        Discover the island
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('story')">
+
+                    <span class="menu-number">
+                        03
+                    </span>
+
+                    <strong>
+                        THE STORY
+                    </strong>
+
+                    <small>
+                        Uncover what happened
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('features')">
+
+                    <span class="menu-number">
+                        04
+                    </span>
+
+                    <strong>
+                        FEATURES
+                    </strong>
+
+                    <small>
+                        What makes TLT different
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('media')">
+
+                    <span class="menu-number">
+                        05
+                    </span>
+
+                    <strong>
+                        MEDIA
+                    </strong>
+
+                    <small>
+                        Screenshots and videos
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('team')">
+
+                    <span class="menu-number">
+                        06
+                    </span>
+
+                    <strong>
+                        THE TEAM
+                    </strong>
+
+                    <small>
+                        The people behind TLT
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('support')">
+
+                    <span class="menu-number">
+                        07
+                    </span>
+
+                    <strong>
+                        SUPPORT
+                    </strong>
+
+                    <small>
+                        Help and contact
+                    </small>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         THE GAME
+    ========================== -->
+
+    <section id="game" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                01 / THE GAME
+            </div>
+
+            <h2>
+                THE GAME
+            </h2>
+
+
+            <p>
+                THE LAST TRANSMISSION is an open-world military mystery
+                game focused on exploration, investigation, communication
+                and consequences.
+            </p>
+
+
+            <p>
+                Instead of simply following mission markers, players have
+                to observe the world, collect information and understand
+                what is actually happening around them.
+            </p>
+
+
+            <p>
+                The island continues to exist even when the player is not
+                directly involved. Events happen, factions act and
+                information changes over time.
+            </p>
+
+
+
+            <div class="info-box">
+
+                <span>
+                    GENRE
+                </span>
+
+                <strong>
+                    OPEN-WORLD / MILITARY / MYSTERY / ACTION
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <span>
+                    PLATFORM
+                </span>
+
+                <strong>
+                    PC
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <span>
+                    ENGINE
+                </span>
+
+                <strong>
+                    UNREAL ENGINE 5.8.1
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <span>
+                    RELEASE
+                </span>
+
+                <strong>
+                    2030
+                </strong>
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         THE WORLD
+    ========================== -->
+
+    <section id="world" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                02 / THE WORLD
+            </div>
+
+            <h2>
+                THE WORLD
+            </h2>
+
+
+            <p>
+                The game takes place on a remote island inspired by the
+                landscapes of Tanaga Island in Alaska.
+            </p>
+
+
+            <p>
+                The island is isolated from the outside world and contains
+                military facilities, abandoned locations, communication
+                infrastructure, settlements and areas that have been left
+                untouched for years.
+            </p>
+
+
+            <p>
+                The environment is not simply a background. Locations,
+                objects, signals and events can contain information about
+                what happened.
+            </p>
+
+
+
+            <div class="world-grid">
+
+
+                <div class="world-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        REMOTE
+                    </strong>
+
+                    <small>
+                        Far away from the normal world.
+                    </small>
+
+                </div>
+
+
+
+                <div class="world-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        UNSTABLE
+                    </strong>
+
+                    <small>
+                        Events can change the state of the island.
+                    </small>
+
+                </div>
+
+
+
+                <div class="world-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        ALIVE
+                    </strong>
+
+                    <small>
+                        The world continues without the player.
+                    </small>
+
+                </div>
+
+
+
+                <div class="world-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        UNKNOWN
+                    </strong>
+
+                    <small>
+                        Not everything you hear is true.
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         THE STORY
+    ========================== -->
+
+    <section id="story" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                03 / THE STORY
+            </div>
+
+            <h2>
+                THE STORY
+            </h2>
+
+
+            <p>
+                Something happened on the island.
+            </p>
+
+
+            <p>
+                Communications were interrupted. Information disappeared.
+                People stopped responding. Different groups began telling
+                different versions of the same events.
+            </p>
+
+
+            <p>
+                The player is not given the complete truth at the beginning.
+                Instead, the story is reconstructed through transmissions,
+                conversations, documents, locations and events.
+            </p>
+
+
+            <p>
+                Some information can be incomplete. Some can be outdated.
+                Some can contradict other information.
+            </p>
+
+
+
+            <div class="story-box">
+
+                <span>
+                    THE CORE LOOP
+                </span>
+
+                <strong>
+                    EXPLORE → OBSERVE → COLLECT INFORMATION
+                    → UNDERSTAND → DECIDE → ACT → EXPERIENCE CONSEQUENCES
+                </strong>
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section id="features" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                04 / FEATURES
+            </div>
+
+            <h2>
+                FEATURES
+            </h2>
+
+
+
+            <div class="feature-list">
+
+
+                <div class="feature-item">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            INFORMATION SYSTEM
+                        </strong>
+
+                        <p>
+                            Information can be confirmed, unconfirmed,
+                            contradictory, false or incomplete.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            RADIO & COMMUNICATION
+                        </strong>
+
+                        <p>
+                            Radio communication is a central part of the
+                            game and can provide important information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            LIVING WORLD
+                        </strong>
+
+                        <p>
+                            Events can happen independently of the player.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            CAUSAL CONSEQUENCES
+                        </strong>
+
+                        <p>
+                            Actions can influence later events and change
+                            the state of the world.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <span>
+                        05
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            MYSTERY RECONSTRUCTION
+                        </strong>
+
+                        <p>
+                            Players piece together what happened using
+                            evidence from the world.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <span>
+                        06
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            DIEGETIC EXPLORATION
+                        </strong>
+
+                        <p>
+                            The environment itself can provide clues
+                            instead of relying entirely on map markers.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MEDIA
+    ========================== -->
+
+    <section id="media" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                05 / MEDIA
+            </div>
+
+            <h2>
+                MEDIA
+            </h2>
+
+
+            <p>
+                Screenshots, videos, development footage and other media
+                from THE LAST TRANSMISSION will appear here.
+            </p>
+
+
+
+            <div class="media-grid">
+
+
+                <div class="media-placeholder">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        SCREENSHOTS
+                    </strong>
+
+                    <small>
+                        COMING SOON
+                    </small>
+
+                </div>
+
+
+
+                <div class="media-placeholder">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        GAMEPLAY
+                    </strong>
+
+                    <small>
+                        COMING SOON
+                    </small>
+
+                </div>
+
+
+
+                <div class="media-placeholder">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        TRAILER
+                    </strong>
+
+                    <small>
+                        COMING SOON
+                    </small>
+
+                </div>
+
+
+
+                <div class="media-placeholder">
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        DEVLOGS
+                    </strong>
+
+                    <small>
+                        COMING SOON
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         THE TEAM
+    ========================== -->
+
+    <section id="team" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                06 / THE TEAM
+            </div>
+
+            <h2>
+                THE TEAM
+            </h2>
+
+
+            <p>
+                THE LAST TRANSMISSION is being developed by
+                <strong>MAXIMUS GAMES</strong>, with major support from
+                <strong>WEARE STUDIOS</strong>.
+            </p>
+
+
+
+            <div class="team-grid">
+
+
+                <div class="team-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        BEN MEINERS
+                    </strong>
+
+                    <small>
+                        MAXIMUS GAMES
+                    </small>
+
+                </div>
+
+
+
+                <div class="team-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        UNREAL PROGRAMMER
+                    </strong>
+
+                    <small>
+                        POSITION OPEN
+                    </small>
+
+                </div>
+
+
+
+                <div class="team-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        GAMEPLAY PROGRAMMER
+                    </strong>
+
+                    <small>
+                        POSITION OPEN
+                    </small>
+
+                </div>
+
+
+
+                <div class="team-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        3D ARTIST
+                    </strong>
+
+                    <small>
+                        POSITION OPEN
+                    </small>
+
+                </div>
+
+
+
+                <div class="team-card">
+
+                    <span>
+                        05
+                    </span>
+
+                    <strong>
+                        ENVIRONMENT ARTIST
+                    </strong>
+
+                    <small>
+                        POSITION OPEN
+                    </small>
+
+                </div>
+
+
+
+                <div class="team-card">
+
+                    <span>
+                        06
+                    </span>
+
+                    <strong>
+                        CHARACTER ARTIST
+                    </strong>
+
+                    <small>
+                        POSITION OPEN
+                    </small>
+
+                </div>
+
+
+
+                <div class="team-card">
+
+                    <span>
+                        07
+                    </span>
+
+                    <strong>
+                        ANIMATOR
+                    </strong>
+
+                    <small>
+                        POSITION OPEN
+                    </small>
+
+                </div>
+
+
+
+                <div class="team-card">
+
+                    <span>
+                        08
+                    </span>
+
+                    <strong>
+                        LEVEL DESIGNER
+                    </strong>
+
+                    <small>
+                        POSITION OPEN
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SUPPORT
+    ========================== -->
+
+    <section id="support" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                07 / SUPPORT
+            </div>
+
+            <h2>
+                SUPPORT
+            </h2>
+
+
+            <p>
+                Need help with THE LAST TRANSMISSION?
+                Choose an option below.
+            </p>
+
+
+
+            <div class="menu-grid">
+
+
+                <button onclick="showPage('bug-report')">
+
+                    <span class="menu-number">
+                        01
+                    </span>
+
+                    <strong>
+                        BUG REPORT
+                    </strong>
+
+                    <small>
+                        Report a problem
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('technical-support')">
+
+                    <span class="menu-number">
+                        02
+                    </span>
+
+                    <strong>
+                        TECHNICAL SUPPORT
+                    </strong>
+
+                    <small>
+                        Technical problems
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('feedback')">
+
+                    <span class="menu-number">
+                        03
+                    </span>
+
+                    <strong>
+                        FEEDBACK
+                    </strong>
+
+                    <small>
+                        Ideas and suggestions
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="showPage('faq')">
+
+                    <span class="menu-number">
+                        04
+                    </span>
+
+                    <strong>
+                        FAQ
+                    </strong>
+
+                    <small>
+                        Frequently asked questions
+                    </small>
+
+                </button>
+
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         BUG REPORT
+    ========================== -->
+
+    <section id="bug-report" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                SUPPORT / BUG REPORT
+            </div>
+
+            <h2>
+                BUG REPORT
+            </h2>
+
+
+            <p>
+                Found a problem in THE LAST TRANSMISSION?
+                Please give us as much information as possible.
+            </p>
+
+
+
+            <form
+                class="support-form"
+                onsubmit="submitSupportForm(event, 'BUG')">
+
+
+                <label>
+                    YOUR EMAIL
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+
+
+                <label>
+                    SUBJECT
+                </label>
+
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Example: Game crashes when entering the bunker"
+                    required
+                >
+
+
+
+                <label>
+                    GAME VERSION
+                </label>
+
+                <input
+                    type="text"
+                    name="version"
+                    placeholder="Example: 0.1.0"
+                    required
+                >
+
+
+
+                <label>
+                    PLATFORM
+                </label>
+
+                <select
+                    name="platform"
+                    required>
+
+                    <option value="">
+                        Select your platform
+                    </option>
+
+                    <option value="Windows 10">
+                        Windows 10
+                    </option>
+
+                    <option value="Windows 11">
+                        Windows 11
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+
+                <label>
+                    WHAT HAPPENED?
+                </label>
+
+                <textarea
+                    name="description"
+                    placeholder="Describe exactly what happened..."
+                    required
+                ></textarea>
+
+
+
+                <label>
+                    STEPS TO REPRODUCE
+                </label>
+
+                <textarea
+                    name="steps"
+                    placeholder="1. Start the game&#10;2. Enter the bunker&#10;3. Walk towards the door&#10;4. The problem occurs..."
+                ></textarea>
+
+
+
+                <label>
+                    ADDITIONAL INFORMATION
+                </label>
+
+                <textarea
+                    name="additional"
+                    placeholder="Anything else that could help us?"
+                ></textarea>
+
+
+
+                <button
+                    type="submit"
+                    class="submit-button">
+
+                    SEND BUG REPORT
+
+                </button>
+
+            </form>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('support')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TECHNICAL SUPPORT
+    ========================== -->
+
+    <section id="technical-support" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                SUPPORT / TECHNICAL SUPPORT
+            </div>
+
+            <h2>
+                TECHNICAL SUPPORT
+            </h2>
+
+
+            <p>
+                Having technical problems with the game?
+                Tell us what is happening.
+            </p>
+
+
+
+            <form
+                class="support-form"
+                onsubmit="submitSupportForm(event, 'TECH')">
+
+
+                <label>
+                    YOUR EMAIL
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+
+
+                <label>
+                    SUBJECT
+                </label>
+
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Example: Game does not start"
+                    required
+                >
+
+
+
+                <label>
+                    GAME VERSION
+                </label>
+
+                <input
+                    type="text"
+                    name="version"
+                    placeholder="Example: 0.1.0"
+                    required
+                >
+
+
+
+                <label>
+                    OPERATING SYSTEM
+                </label>
+
+                <select
+                    name="platform"
+                    required>
+
+                    <option value="">
+                        Select your operating system
+                    </option>
+
+                    <option value="Windows 10">
+                        Windows 10
+                    </option>
+
+                    <option value="Windows 11">
+                        Windows 11
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+
+                <label>
+                    PROBLEM
+                </label>
+
+                <textarea
+                    name="description"
+                    placeholder="Describe the technical problem..."
+                    required
+                ></textarea>
+
+
+
+                <label>
+                    ERROR MESSAGE
+                </label>
+
+                <textarea
+                    name="error"
+                    placeholder="If you received an error message, write it here..."
+                ></textarea>
+
+
+
+                <label>
+                    WHAT HAVE YOU ALREADY TRIED?
+                </label>
+
+                <textarea
+                    name="tried"
+                    placeholder="Tell us what you already tried to fix the problem..."
+                ></textarea>
+
+
+
+                <button
+                    type="submit"
+                    class="submit-button">
+
+                    SEND SUPPORT REQUEST
+
+                </button>
+
+            </form>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('support')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FEEDBACK
+    ========================== -->
+
+    <section id="feedback" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                SUPPORT / FEEDBACK
+            </div>
+
+            <h2>
+                FEEDBACK
+            </h2>
+
+
+            <p>
+                Have an idea, suggestion or something you would like
+                to see in THE LAST TRANSMISSION?
+            </p>
+
+
+
+            <form
+                class="support-form"
+                onsubmit="submitSupportForm(event, 'FEEDBACK')">
+
+
+                <label>
+                    YOUR EMAIL
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                >
+
+
+
+                <label>
+                    SUBJECT
+                </label>
+
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Example: Suggestion for the radio system"
+                    required
+                >
+
+
+
+                <label>
+                    CATEGORY
+                </label>
+
+                <select
+                    name="category"
+                    required>
+
+                    <option value="">
+                        Select a category
+                    </option>
+
+                    <option value="Gameplay">
+                        Gameplay
+                    </option>
+
+                    <option value="Story">
+                        Story
+                    </option>
+
+                    <option value="World">
+                        World
+                    </option>
+
+                    <option value="Missions">
+                        Missions
+                    </option>
+
+                    <option value="UI">
+                        UI / UX
+                    </option>
+
+                    <option value="Audio">
+                        Audio
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+
+                <label>
+                    YOUR FEEDBACK
+                </label>
+
+                <textarea
+                    name="description"
+                    placeholder="Tell us what you think..."
+                    required
+                ></textarea>
+
+
+
+                <label>
+                    WHY WOULD THIS BE USEFUL?
+                </label>
+
+                <textarea
+                    name="reason"
+                    placeholder="Tell us why you think this would improve the game..."
+                ></textarea>
+
+
+
+                <button
+                    type="submit"
+                    class="submit-button">
+
+                    SEND FEEDBACK
+
+                </button>
+
+            </form>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('support')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section id="faq" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                SUPPORT / FAQ
+            </div>
+
+            <h2>
+                FAQ
+            </h2>
+
+
+
+            <div class="faq-list">
+
+
+                <div class="faq-item">
+
+                    <strong>
+                        WHEN WILL TLT RELEASE?
+                    </strong>
+
+                    <p>
+                        THE LAST TRANSMISSION is currently planned
+                        for 2030.
+                    </p>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <strong>
+                        WHAT PLATFORMS?
+                    </strong>
+
+                    <p>
+                        The current target platform is PC.
+                    </p>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <strong>
+                        WHAT ENGINE IS BEING USED?
+                    </strong>
+
+                    <p>
+                        THE LAST TRANSMISSION is being developed
+                        with Unreal Engine 5.8.1.
+                    </p>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <strong>
+                        IS THE GAME MULTIPLAYER?
+                    </strong>
+
+                    <p>
+                        Multiplayer plans have not been finalized.
+                    </p>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <strong>
+                        WHERE CAN I FOLLOW DEVELOPMENT?
+                    </strong>
+
+                    <p>
+                        Development updates and future media will
+                        be published through the official channels
+                        of the project.
+                    </p>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <strong>
+                        CAN I JOIN THE TEAM?
+                    </strong>
+
+                    <p>
+                        Additional team members may be recruited as
+                        development progresses.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('support')">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SUPPORT SUCCESS
+    ========================== -->
+
+    <section id="support-success" class="page">
+
+        <div class="content">
+
+            <div class="section-label">
+                SUPPORT / RECEIVED
+            </div>
+
+            <h2>
+                REQUEST RECEIVED
+            </h2>
+
+
+            <p>
+                Your support request has been received.
+            </p>
+
+
+
+            <div class="ticket-box">
+
+                <span>
+                    TICKET ID
+                </span>
+
+                <strong id="ticket-id">
+                    SUP-000000
+                </strong>
+
+                <small>
+                    STATUS: OPEN
+                </small>
+
+            </div>
+
+
+            <p>
+                Keep your ticket ID if you need to refer to this
+                request later.
+            </p>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('support')">
+
+                ← BACK TO SUPPORT
+
+            </button>
+
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← HOME
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <span>
+            TLT © 2026
+        </span>
+
+        <span>
+            MAXIMUS GAMES × WEARE STUDIOS
+        </span>
+
+        <span>
+            UNREAL ENGINE 5.8.1
+        </span>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showPage(pageId) {
+
+            const pages =
+                document.querySelectorAll(".page");
+
+
+            pages.forEach(function(page) {
+
+                page.classList.remove("active");
+
+            });
+
+
+            const selectedPage =
+                document.getElementById(pageId);
+
+
+            if (selectedPage) {
+
+                selectedPage.classList.add("active");
+
+            }
+
+
+            window.scrollTo({
+
+                top: 0,
+                behavior: "instant"
+
+            });
+
+        }
+
+
+
+        function submitSupportForm(event, type) {
+
+            event.preventDefault();
+
+
+            const ticketNumber =
+                Math.floor(
+                    100000 +
+                    Math.random() * 900000
+                );
+
+
+            const ticketId =
+                "SUP-" + ticketNumber;
+
+
+            const ticketElement =
+                document.getElementById("ticket-id");
+
+
+            if (ticketElement) {
+
+                ticketElement.textContent =
+                    ticketId;
+
+            }
+
+
+            showPage("support-success");
+
+        }
+
+    </script>
+
+</body>
+</html>
